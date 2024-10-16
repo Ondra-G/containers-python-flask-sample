@@ -1,5 +1,7 @@
 from flask import Flask
-
+from threading import Thread
+import backend_code
+Thread(target=Cloud_Requests_Testing.run).start()
 app = Flask(__name__)
 
 @app.route('/')
